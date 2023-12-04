@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavLink, BrowserRouter, Route, Routes } from "react-router-dom";
+import { NavLink, Route, Routes } from "react-router-dom";
 import "../CssComponent/Navbar.css";
 import { FaCartArrowDown } from "react-icons/fa";
 import { IoIosArrowForward } from "react-icons/io";
@@ -19,7 +19,6 @@ import LogIn from "./Login";
 import Register from "./Signup";
 import TechOnUdemy from "./TechOnUdemy";
 import SubCategories from "../MultipleComponent/SubCategories";
-import cart from "../Component/cart";
 import Cart from "../Component/cart";
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -95,12 +94,12 @@ const Navbar = () => {
                   <ul>
                     <NavLink to="/login">
                       <li>
-                        <a href="#">Login</a>
+                        <a>Login</a>
                       </li>
                     </NavLink>
                     <NavLink to="/register">
                       <li>
-                        <a href="#">signup</a>
+                        <a>signup</a>
                       </li>
                     </NavLink>
                     <li>
