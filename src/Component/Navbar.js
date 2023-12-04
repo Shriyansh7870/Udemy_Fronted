@@ -94,12 +94,12 @@ const Navbar = () => {
                   <ul>
                     <NavLink to="/login">
                       <li>
-                        <a>Login</a>
+                        <div>Login</div>
                       </li>
                     </NavLink>
                     <NavLink to="/register">
                       <li>
-                        <a>signup</a>
+                        <div>signup</div>
                       </li>
                     </NavLink>
                     <li>
