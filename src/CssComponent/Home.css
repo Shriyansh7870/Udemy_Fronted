@@ -1,0 +1,589 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+* {
+}
+.HomeConatainer {
+  width: 100%;
+  display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+.Advertimsement {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+  height: 48vh;
+  position: relative;
+  flex-wrap: wrap;
+}
+.Advertimsement1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.AdvertisementImg {
+  margin-top: 5px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.AdvertimsementImg2 {
+  width: 100%;
+  height: 100%;
+}
+.text {
+  position: absolute;
+  width: 26vw;
+  height: 20vh;
+  left: 5%;
+  z-index: 4;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px white;
+}
+.AdvertimsementText {
+  position: absolute;
+  top: 30%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  color: black;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+.Teacherimg {
+  width: 400px;
+}
+.text2 {
+  position: absolute;
+  top: 42%;
+  margin: 6px;
+  font-size: 20px;
+  font-weight: 600;
+}
+.companyName {
+  position: relative;
+  top: 20px;
+  width: 99.8%;
+  height: 20vh;
+  background-color: #f7f9fa;
+}
+.List {
+  margin-top: 2px;
+  text-align: center;
+  font-size: 24px;
+}
+.imageList {
+  padding: 20px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.CourseList {
+  margin-top: 60px;
+  padding: 20px;
+}
+.NumberOfCourse {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px;
+  margin-left: 94px;
+}
+.listOfCourse {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px;
+}
+.ConatinerForCourse {
+  width: 80%;
+  height: 65vh;
+  margin-left: 10%;
+  justify-content: center;
+}
+.Course {
+  font-size: 20px;
+}
+.Course:hover {
+  background-color: aqua;
+}
+.commentContainer {
+  margin-top: 50px;
+  width: 80%;
+  height: 50vh;
+  border: 2px solid black;
+  color: #f7f9fa;
+  margin-left: 10%;
+}
+.comment {
+  font-size: 20px;
+  color: black;
+}
+
+.mulipleConatiner {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.namefirst {
+  background: #2d2f31;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  object-fit: cover;
+  color: var(--color-white);
+}
+.comment1 {
+  width: 25%;
+  height: 40vh;
+  margin: 10px;
+}
+.LearningContainer {
+  margin-top: 20px;
+  background-color: #f7f9fa;
+  width: 80%;
+  height: 40vh;
+  margin-left: 10%;
+}
+.learningContent {
+  display: flex;
+  gap: 10px;
+}
+.LearningHead {
+  font-size: 30px;
+  color: black;
+}
+p {
+  color: #5624d0;
+}
+.Topcategories {
+  margin-top: 20px;
+  background-color: #f7f9fa;
+  width: 80%;
+  height: auto;
+  margin-left: 10%;
+}
+.CategoriesConatiner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.conatiner1 {
+  margin-top: 20px;
+  flex: 1 1 20%;
+  max-width: 23%;
+  max-height: 23%;
+  border-radius: 10px;
+  border: 1px solid grey;
+  text-align: center;
+}
+.conatiner1:hover {
+  transform: translateY(15px);
+}
+
+.first {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+.Featuredcategory {
+  margin-top: 20px;
+  background-color: #f7f9fa;
+  width: 80%;
+  height: 50vh;
+  margin-left: 10%;
+}
+.LearningmainConatiner {
+  display: flex;
+  justify-content: space-evenly;
+}
+.Explore {
+  margin-top: 10px;
+  margin-left: 10%;
+  font-size: 24px;
+}
+.AnotherAdvertisment {
+  margin-top: 20px;
+  background-color: #f7f9fa;
+  width: 80%;
+  height: 60vh;
+  margin-left: 10%;
+}
+.Multiplebutton {
+  display: flex;
+  gap: 10px;
+}
+.makingbutton {
+  margin-top: 20px;
+  width: 220px;
+  height: 40px;
+  font-size: 14px;
+  background-color: grey;
+  font-weight: 700;
+}
+.Advertisment2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.Teaching {
+  width: 200px;
+  height: 40px;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: grey;
+}
+.firstoneadvertisment {
+  margin-top: 20px;
+  flex: 1 1 20%;
+  max-width: 25%;
+  max-height: 25%;
+  border-radius: 20px;
+}
+.firstoneadvertisment2 {
+  width: 30vw;
+  height: 60vh;
+  border-radius: 10px;
+}
+.Review {
+  margin-top: 20px;
+  background-color: #f7f9fa;
+  width: 60%;
+  height: 53vh;
+  margin-left: 20%;
+}
+.ReviewImg {
+  background: #2d2f31;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  object-fit: cover;
+  color: var(--color-white);
+}
+.Review1 {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.textReview {
+  margin-top: 20px;
+  flex: 1 1 20%;
+  max-width: 40%;
+  max-height: 25%;
+  border-radius: 20px;
+}
+.nameReviewforHome {
+  text-align: center;
+}
+.Teacher {
+  margin-top: 20px;
+  background-color: #f7f9fa;
+  width: 100%;
+  height: 60vh;
+}
+.TeacherConatiner {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.TeacherText {
+  margin-top: 80px;
+  width: 25vw;
+  height: 40vh;
+}
+.GetStarted {
+  position: relative;
+  margin-top: 170px;
+  margin-left: 70px;
+  width: 200px;
+  height: 40px;
+  font-weight: 500;
+  font-size: 24px;
+  background-color: grey;
+}
+.Tech {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.TechWord {
+  text-align: center;
+}
+.tech1 {
+  width: 30%;
+  text-align: center;
+}
+.Mildstone {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  background-color: #5624d0;
+  color: white;
+}
+.begin {
+  text-align: center;
+}
+.howtobegin {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.BeginNow {
+  display: flex;
+  justify-content: space-around;
+  height: 10vh;
+}
+.MainBegin {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  padding: auto;
+}
+.BeginTask {
+  width: 40%;
+  margin: auto;
+  position: relative;
+}
+.TeachTeacher {
+  display: flex;
+  width: 60%;
+  margin: auto;
+}
+.TeacherText {
+  margin: auto;
+}
+.leftImageMainContainer {
+  display: flex;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.InstructorTody {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+.todaylast {
+  text-align: center;
+}
+
+.todaylast h1 {
+  font-size: 2.5rem;
+}
+
+.todaylast h3 {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+.todaylast div {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+/**********************************MediaQuer**********************************************/
+@media screen and (max-width: 800px) {
+  .Advertimsement {
+    width: 100%;
+  }
+  .text {
+    display: none;
+    font-size: 18px;
+  }
+  .companyName {
+    margin-top: 10px;
+  }
+  .List {
+    font-size: 14px;
+  }
+  .listOfCourse {
+    display: none;
+  }
+  .ConatinerForCourse {
+    height: auto;
+    width: 100%;
+    margin: auto;
+  }
+  .child_container {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+  }
+  .commentContainer {
+    margin-top: 10px;
+    width: 100%;
+    margin: auto;
+    height: 100%;
+  }
+  .mulipleConatiner {
+    display: none;
+  }
+  .comment {
+    display: none;
+  }
+  .LearningContainer {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+  }
+  .learningContent {
+    flex-direction: column;
+  }
+
+  .Topcategories {
+    width: 100%;
+    margin: auto;
+  }
+  .CategoriesConatiner {
+    width: 100%;
+    flex-direction: column;
+  }
+  .conatiner1 {
+    max-width: 100%;
+    max-height: 50%;
+  }
+  .first {
+    width: 400px;
+  }
+  .Featuredcategory {
+    width: 100%;
+    margin: auto;
+    height: 100%;
+  }
+  .LearningmainConatiner {
+    flex-direction: column;
+    text-align: center;
+  }
+  .firstoneadvertisment2 {
+    width: 350px;
+    height: 200px;
+  }
+  .Advertisment2 {
+    display: flex;
+    flex-direction: row;
+  }
+  .Explore {
+    align-items: center;
+  }
+  .firstoneadvertisment {
+    margin-top: 20px;
+    flex: 1 1 20%;
+    max-height: 25%;
+    max-width: 600px;
+    border-radius: 20px;
+  }
+  .makingbutton {
+    width: 150px;
+  }
+  .Review {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+  }
+  .textforBusiness {
+    font-size: 12px;
+  }
+  .TeacherConatiner {
+    width: 100%;
+  }
+  .TeacherText {
+    width: 100%;
+    height: 100%;
+  }
+  .Teacher {
+    height: 100%;
+  }
+  .AnotherAdvertisment {
+    width: 100%;
+    height: auto;
+    margin: auto;
+  }
+  .udemyimageAll {
+    width: 100%;
+    height: 50px;
+  }
+  .Teaching {
+    margin-left: 100px;
+  }
+  .instructorforTeacher {
+    text-align: center;
+  }
+  .Multiplebutton {
+    justify-content: center;
+  }
+  .Teacherimg {
+    display: none;
+  }
+  .Tech {
+    flex-direction: column;
+  }
+  .tech1 {
+    width: 100%;
+  }
+  .phototech {
+    width: 100%;
+  }
+  .AdvertimsementImg2 {
+    height: 300px;
+  }
+  .Mildstone {
+    display: none;
+  }
+  .begin {
+    display: none;
+  }
+  .BeginNow {
+    /* flex-direction: column;
+    height: 25vh;
+    align-items: center; */
+    display: none;
+  }
+  .MainBegin {
+    flex-direction: column;
+  }
+  .BeginTask {
+    width: 100%;
+  }
+  .studyimage {
+    width: 100%;
+  }
+  .teacherstudyimage {
+    width: 100%;
+  }
+  .TeachTeacher {
+    flex-direction: column;
+    width: 100%;
+  }
+  .leftImageMainContainer {
+    flex-direction: column;
+    width: 100%;
+  }
+  .leftimagefortechudemy {
+    width: 100%;
+  }
+}

@@ -1,38 +1,87 @@
-.App {
-  text-align: center;
+/* Heading Styles */
+.headcart {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Cart Content Styles */
+.cart-content {
+  margin: 20px 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.headOfcart {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr 1fr;
+  background-color: #f2f2f2;
+  padding: 10px;
+  font-weight: bold;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Cart Item Styles */
+.childCartConatiner {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr 1fr;
+  border: 1px solid #ddd;
+  margin: 10px;
+  padding: 10px;
+}
+
+.cartDiv {
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+}
+
+.CartImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.CartName,
+.CartRating {
+  margin-top: 10px;
+}
+.CartPrice {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+/* Align Price to the Right */
+.CartPrice {
+  text-align: right;
 }
 
-.App-link {
-  color: #61dafb;
+.RemoveButtton,
+.buy button {
+  padding: 10px 15px;
+  margin-top: 10px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-size: 16px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.RemoveButtton {
+  background-color: #dc3545; /* Bootstrap red color, you can change it */
+  color: #fff;
+  width: 200px;
+  height: 60px;
+}
+
+.buy button {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.total {
+  margin-top: 20px;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 600px) {
+  .headOfcart,
+  .childCartConatiner {
+    grid-template-columns: 1fr;
   }
 }

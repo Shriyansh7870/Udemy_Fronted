@@ -1,0 +1,284 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.navbar {
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  padding: 15px 0;
+  height: 10vh;
+  box-shadow: 2px 2px 4px gray;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.hamburgerbutton {
+  display: none;
+}
+
+.logo img {
+  margin-right: 15px;
+  padding: 6px;
+}
+
+.categories,
+.udemyBussiness,
+.udemyTech,
+.AddToCart,
+.world {
+  margin-right: 2.1vw;
+  cursor: pointer;
+  color: #333;
+  font-size: 20px;
+}
+.Login {
+  margin-right: 2.1vw;
+  cursor: pointer;
+  color: #333;
+  font-size: 20px;
+  border: 1px solid black;
+  width: 70px;
+  height: 30px;
+  text-align: center;
+  border-radius: 10px;
+}
+.Sign {
+  margin-right: 2.1vw;
+  cursor: pointer;
+  color: #333;
+  font-size: 20px;
+  border: 1px solid black;
+  width: 70px;
+  height: 30px;
+  text-align: center;
+  background-color: black;
+  color: #fff;
+}
+.Searchbar {
+  width: 100%;
+  margin-right: 20px;
+}
+.Searchbar input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+/* Adjust icon colors as needed */
+.world svg {
+  color: #333;
+}
+/****************************categories**********************************/
+
+.ParentCategories {
+  position: relative;
+}
+.categorie1 {
+  display: none;
+}
+.ParentCategories .categorie1 {
+  flex-direction: column;
+  position: absolute;
+  left: 0%;
+  top: 7.8vh;
+  width: 14vw;
+  gap: 5px;
+  z-index: 999;
+  background-color: white;
+  border: 2px solid rebeccapurple;
+  display: none;
+}
+
+.ParentCategories:hover .categorie1 {
+  display: flex;
+}
+.insideCategories {
+  position: absolute;
+  height: 40vh;
+  width: 5vw;
+}
+.arrowNavbar {
+  margin-left: 8px;
+}
+.secondinner {
+  position: absolute;
+  height: 40vh;
+  width: 5vw;
+}
+
+.ParentCategories {
+  position: relative;
+}
+
+.ParentCategories .categoriesChildWrap {
+  opacity: 0;
+  pointer-events: none;
+  transition: all 200ms ease;
+}
+
+.categoriesChildWrap {
+  padding-top: 70px;
+  position: absolute;
+  left: 0%;
+  top: 0;
+  z-index: 10;
+}
+
+.ParentCategories:hover .categoriesChildWrap {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.categoriesChild {
+  display: flex;
+  flex-direction: column;
+  min-width: 200px;
+  z-index: 999;
+  background-color: white;
+  border: 1px solid #ccc;
+  margin: 0;
+  padding-left: 0;
+}
+
+.categoriesChildContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.categoriesChildContent {
+  border-bottom: 1px solid #ccc;
+  padding: 4px 12px;
+}
+.categoriesChildContent a {
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  width: 100%;
+}
+.categoriesGrandChildWrap {
+  position: absolute;
+  background-color: white;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 300ms ease;
+  list-style: none;
+  left: 100%;
+  padding: 0;
+  top: 77px;
+  min-height: 32vh;
+  width: 16vw;
+  margin-left: 2px;
+  border-bottom: 1px solid #ccc;
+}
+
+.categoriesChildContent:hover .categoriesGrandChildWrap {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.categoriesChildContent .categoriesGrandChildWrap > li {
+  padding: 4px 10px;
+  border-bottom: 1px solid #ccc;
+  white-space: nowrap;
+}
+
+.mobileHamburger > button {
+  background: none;
+  display: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+ul {
+  list-style: none;
+  text-decoration: none;
+}
+li {
+  list-style: none;
+  text-decoration: none;
+}
+.navbarOpen {
+  display: block;
+}
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+.MobileNavbarContent {
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  transform: translateX(-100%);
+  transition: all 200ms ease;
+}
+
+.MobileNavbarContentData {
+  background-color: white;
+  height: 100%;
+  width: fit-content;
+  min-width: 280px;
+  position: relative;
+  overflow: hidden;
+}
+
+.navbarOpen .MobileNavbarContent {
+  transform: translate(0);
+  display: block;
+}
+@media screen and (min-width: 801px) {
+  .mobileHamburger {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .categories,
+  .udemyBussiness,
+  .udemyTech,
+  .Login,
+  .Sign,
+  .world {
+    display: none;
+  }
+}
+.hamburgerbutton {
+  display: block;
+}
+.MobilenavbarMainUl {
+  list-style: none;
+}
+
+.MobilenavbarMainUl > li {
+  cursor: pointer;
+}
+
+.MobilenavbarMainSubData {
+  transform: translateX(100%);
+  position: absolute;
+  right: 0;
+  height: 100%;
+  background-color: white;
+  top: 0;
+  transition: all 200ms linear;
+  width: 100%;
+}
+
+.subData.subDataOpen .MobilenavbarMainSubData {
+  transform: translateX(0%);
+}

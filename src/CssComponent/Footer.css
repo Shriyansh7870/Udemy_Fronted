@@ -1,0 +1,49 @@
+.footer {
+  background-color: #1c1d1f;
+  color: white;
+  padding: 30px 0;
+  /* margin-top: 4vh; */
+}
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  color: #f2f2f2;
+}
+.footer-section {
+  flex: 1;
+  text-align: center;
+  color: #f2f2f2;
+}
+.footertext {
+  font-size: 25px;
+  color: white;
+  text-decoration: none;
+}
+.footer-section p {
+  margin: 10px 0;
+  color: #f2f2f2;
+}
+.English {
+  width: 100px;
+  height: 40px;
+  font-size: 20px;
+  font-weight: bolder;
+}
+.footer-section h2 {
+  font-size: 1.2rem;
+  color: #f2f2f2;
+}
+.companyName2 {
+  display: flex;
+  justify-content: center;
+  margin-top: 2vh;
+  color: white;
+}
+@media (max-width: 668px) {
+  .footer-content {
+    flex-direction: column;
+  }
+  .footer {
+    /* margin-top: 2vh; */
+  }
+}
