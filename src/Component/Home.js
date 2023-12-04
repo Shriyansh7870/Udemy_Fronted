@@ -32,7 +32,7 @@ const Home = () => {
         <div className="Advertimsement">
           {data1 &&
             data1
-              .filter((item) => item.id == 1)
+              .filter((item) => item.id === 1)
               .map((item, index) => (
                 <img
                   key={index}
@@ -433,6 +433,7 @@ const Home = () => {
             <img
               className="udemyimageAll"
               src="https://www.udemy.com/staticx/udemy/images/v7/logo-ub.svg"
+              alt="not found"
               width="192px"
               height="132px"
             />
@@ -457,6 +458,7 @@ const Home = () => {
             <img
               className="firstoneadvertisment2"
               src="https://s.udemycdn.com/home/non-student-cta/UB_Promo_800x800.jpg"
+              alt="not found"
             />
           </div>
         </div>
@@ -468,6 +470,7 @@ const Home = () => {
               src="https://s.udemycdn.com/browse_components/student-quote-unit/quote.svg"
               width="20px"
               height="20px"
+              alt="not found"
             />
             <h3 className="textforBusiness">
               Thanks to Udemy Business, Booz Allen has armed our workforce,
@@ -484,6 +487,7 @@ const Home = () => {
               src="https://s.udemycdn.com/home/ub-case-studies/James_Hemgen.jpeg"
               height="200px"
               width="200px"
+              alt="not found"
             />
             <div className="nameReviewforHome">
               <h1>Jim Hemgen</h1>
@@ -496,7 +500,10 @@ const Home = () => {
       <div className="Teacher">
         <div className="TeacherConatiner">
           <div className="Teacherimg">
-            <img src="https://s.udemycdn.com/home/non-student-cta/instructor-1x-v3.jpg" />
+            <img
+              src="https://s.udemycdn.com/home/non-student-cta/instructor-1x-v3.jpg"
+              alt="not found"
+            />
           </div>
           <div className="TeacherText">
             <h1>Become an instructor</h1>
