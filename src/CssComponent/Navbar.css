@@ -58,16 +58,28 @@ a {
   cursor: pointer;
   color: #333;
   font-size: 20px;
-  border: 1px solid black;
-  width: 70px;
+  width: 78px;
   height: 30px;
   text-align: center;
   background-color: black;
   color: #fff;
+  border-radius: 6px;
+}
+.logoutbutton {
+  width: 120px;
+  height: 30px;
+  font-size: 16px;
+  border-radius: 5px;
+  color: blue;
 }
 .Searchbar {
-  width: 100%;
+  display: flex;
+  width: 54%;
   margin-right: 20px;
+}
+.searchicon {
+  font-size: 20px;
+  margin-top: 10px;
 }
 .Searchbar input {
   padding: 12px;
@@ -75,7 +87,10 @@ a {
   border-radius: 5px;
   width: 100%;
 }
-
+.cartitemnumber {
+  margin-top: -60px;
+  text-align: center;
+}
 /* Adjust icon colors as needed */
 .world svg {
   color: #333;
@@ -167,10 +182,12 @@ a {
   justify-content: space-between;
   text-decoration: none;
   width: 100%;
+  gap: 20px;
 }
 .categoriesGrandChildWrap {
   position: absolute;
   background-color: white;
+  border-bottom: 4px solid #ccc;
   opacity: 0;
   pointer-events: none;
   transition: all 300ms ease;
@@ -181,17 +198,16 @@ a {
   min-height: 32vh;
   width: 16vw;
   margin-left: 2px;
-  border-bottom: 1px solid #ccc;
 }
 
 .categoriesChildContent:hover .categoriesGrandChildWrap {
   opacity: 1;
   pointer-events: all;
+  border-bottom: 1px solid #ccc;
 }
 
 .categoriesChildContent .categoriesGrandChildWrap > li {
   padding: 4px 10px;
-  border-bottom: 1px solid #ccc;
   white-space: nowrap;
 }
 
@@ -235,14 +251,25 @@ li {
   min-width: 280px;
   position: relative;
   overflow: hidden;
+  margin-left: 0px;
 }
-
+.crossbutton {
+  margin-left: 200px;
+  font-size: 24px;
+}
+.hamburgerbutton2 {
+  display: block;
+}
 .navbarOpen .MobileNavbarContent {
   transform: translate(0);
   display: block;
 }
+
 @media screen and (min-width: 801px) {
   .mobileHamburger {
+    display: none;
+  }
+  .hamburgerbutton2 {
     display: none;
   }
 }
@@ -269,7 +296,7 @@ li {
 }
 
 .MobilenavbarMainSubData {
-  transform: translateX(100%);
+  transform: translateX(-100%);
   position: absolute;
   right: 0;
   height: 100%;
@@ -280,5 +307,5 @@ li {
 }
 
 .subData.subDataOpen .MobilenavbarMainSubData {
-  transform: translateX(0%);
+  transform: translateX(100%);
 }

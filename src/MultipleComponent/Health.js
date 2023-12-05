@@ -48,7 +48,7 @@ const Health = () => {
 
   return (
     <>
-      <div className=" navbar">
+      <div className=" navbar1">
         <div className="navabarSecond">
           <div>Fitness➡️</div>
           <div>General Health</div>
@@ -73,6 +73,8 @@ const Health = () => {
                 <div className="laptop_div">
                   <img className="MainImage" src={item.image} alt="Not Found" />
                 </div>
+                <div>{item.name.slice(0, 50)}</div>
+                <div>{item.type.slice(0, 50)}</div>
                 <div>{item.description.slice(0, 50)}</div>
                 <div className="LaptopmodelName">{item.instructor}</div>
                 <div className="">{item.Rating}⭐⭐⭐⭐⭐</div>

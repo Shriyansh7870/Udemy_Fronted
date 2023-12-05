@@ -6,6 +6,7 @@ import Footer from "./Footer";
 
 const Cart = () => {
   const [cartItems, setCartItems] = useState([]);
+  const [sum, setSum] = useState(0);
 
   useEffect(() => {
     axios
@@ -13,7 +14,6 @@ const Cart = () => {
       .then((res) => setCartItems(res.data))
       .catch((err) => console.error(err));
   }, []);
-  console.log(cartItems);
 
   const handleRemoveCart = async (itemId) => {
     await axios
@@ -26,7 +26,6 @@ const Cart = () => {
       .get("https://udemy-backend-kutp.onrender.com/api/getaddCart")
       .then((res) => setCartItems(res.data));
   };
-  const [sum, setSum] = useState();
   useEffect(() => {
     let value = 0;
     cartItems.map((item) => (value += item.price));
@@ -101,16 +100,14 @@ const Cart = () => {
                 >
                   Remove
                 </button>
-
-                <div className="total">
-                  <h2>Total=</h2>
-                </div>
-
-                <div className="buy">
-                  <button onClick={stripePayment}>Buy Now</button>
-                </div>
               </div>
             ))}
+        </div>
+        <div className="total">
+          <h2>Total={sum}</h2>
+        </div>
+        <div className="buy">
+          <button onClick={stripePayment}>checkout</button>
         </div>
         <div></div>
       </div>

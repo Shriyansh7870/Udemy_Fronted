@@ -6,6 +6,7 @@ import "./Login.css";
 
 function LogIn() {
   const [data, setData] = useState({
+    name: "",
     email: "",
     password: "",
   });
@@ -34,8 +35,10 @@ function LogIn() {
       .catch((error) => {
         console.error("Error:", error);
       });
+    console.log(data);
 
     setData({
+      name: "",
       email: "",
       password: "",
     });
@@ -46,6 +49,17 @@ function LogIn() {
       <div className="center">
         <h1 className="heading">Register</h1>
         <form className="loginform" onSubmit={handleSubmit}>
+          <label className="word" htmlFor="name">
+            NAME:
+          </label>
+          <input
+            className="signup1"
+            type="text"
+            name="name"
+            id="name"
+            onChange={handleChange}
+            value={data.name}
+          />
           <label className="word" htmlFor="email">
             Email:
           </label>

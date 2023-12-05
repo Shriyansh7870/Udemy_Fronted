@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink, Route, Routes } from "react-router-dom";
 import "../CssComponent/Navbar.css";
 import { FaCartArrowDown } from "react-icons/fa";
@@ -20,8 +20,21 @@ import Register from "./Signup";
 import TechOnUdemy from "./TechOnUdemy";
 import SubCategories from "../MultipleComponent/SubCategories";
 import Cart from "../Component/cart";
+import Learning from "./Learnig";
+import { IoSearchOutline } from "react-icons/io5";
+import axios from "axios";
+import Search from "./Search";
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const [loginstate, setLoginState] = useState("");
+  const [results, setResults] = useState([]);
+  const [query, setQuery] = useState("");
+  const [cartItems, setCartItems] = useState();
+  useEffect(() => {
+    const nameDescription = localStorage.getItem("name");
+    setLoginState(nameDescription);
+  }, []);
+
   const arr1 = [
     "Web Development",
     "Data Science",
@@ -79,13 +92,39 @@ const Navbar = () => {
     "Vocal",
     "Music Techniques",
   ];
-  console.log(open);
+  const handleLogOut = () => {
+    localStorage.clear();
+  };
+  const HandleChange = (e) => {
+    const inputValue = e.target.value;
+    setQuery(inputValue);
+  };
+  useEffect(() => {
+    try {
+      axios
+        .get(` http://localhost:4000/api/searchdata?type=${query}`)
+        .then((res) => setResults(res.data));
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  }, [query]);
+  useEffect(() => {
+    axios
+      .get("https://udemy-backend-kutp.onrender.com/api/getaddCart")
+      .then((res) => {
+        // setCartItems(res.data.length);
+        const length = res.data.length;
+        setCartItems(length);
+      })
+      .catch((err) => console.error(err));
+  }, []);
+
   return (
     <>
       <div className="navbar">
         <div className="container">
           <div className="logo">
-            <button className="hamburgerbutton" onClick={() => setOpen(!open)}>
+            <button className="hamburgerbutton2" onClick={() => setOpen(!open)}>
               <RxHamburgerMenu />
             </button>
             <div className={open ? "mobileHamburger navbarOpen" : "hide"}>
@@ -103,7 +142,12 @@ const Navbar = () => {
                       </li>
                     </NavLink>
                     <li>
-                      <button onClick={() => setOpen(!open)}>"x"</button>
+                      <button
+                        className="crossbutton"
+                        onClick={() => setOpen(!open)}
+                      >
+                        x
+                      </button>
                     </li>
                   </ul>
 
@@ -120,10 +164,15 @@ const Navbar = () => {
                         </div>
                       </li>
                     </NavLink>
-                    <NavLink to="//Business">
+                    <NavLink to="/Business">
                       <li className="subData">
                         Business
-                        <div className="MobilenavbarMainSubData">sub data</div>
+                        <div
+                          className="MobilenavbarMainSubData"
+                          onClick={() => setOpen(!open)}
+                        >
+                          sub data
+                        </div>
                       </li>
                     </NavLink>
                     <NavLink to="/finance">
@@ -341,7 +390,15 @@ const Navbar = () => {
               </div>
             </div>
             <div className="Searchbar">
-              <input type="text" placeholder="Search for courses..." value="" />
+              <input
+                type="text"
+                placeholder="Search for courses..."
+                value={query}
+                onChange={HandleChange}
+              />
+              <NavLink to="/search" state={results}>
+                <IoSearchOutline className="searchicon" />
+              </NavLink>
             </div>
             <NavLink to="/techonUdemy">
               <div className="udemyTech">Tech</div>
@@ -349,17 +406,40 @@ const Navbar = () => {
             <NavLink to="/cart">
               <div className="AddToCart">
                 <FaCartArrowDown />
+                <div className="cartitemnumber">{cartItems}</div>
               </div>
             </NavLink>
-            <NavLink to="/login">
-              <div className="Login">Login</div>
-            </NavLink>
-            <NavLink to="/register">
-              <div className="Sign">SignUp</div>
-            </NavLink>
+
             <div className="world">
               <TbWorld />
             </div>
+            {loginstate ? (
+              <div className="HiiOne">
+                <div className="UserLogo">{loginstate.slice(0, 1)}</div>
+                <div className="outlineDescription">
+                  <div className="UserDescription">
+                    <NavLink to="/cart">
+                      <p>Cart</p>
+                    </NavLink>
+                    <NavLink to="/learning">
+                      <p>MyLearning</p>
+                    </NavLink>
+                    <button className="logoutbutton" onClick={handleLogOut}>
+                      Logout
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <div className="userCreditals">
+                <NavLink to="/login">
+                  <div className="Login">Login</div>
+                </NavLink>
+                <NavLink to="/register">
+                  <div className="Sign">SignUp</div>
+                </NavLink>
+              </div>
+            )}
           </div>
         </div>
       </div>
@@ -378,6 +458,8 @@ const Navbar = () => {
         <Route path="/techonUdemy" element={<TechOnUdemy />}></Route>
         <Route path="/subcategory/:name" element={<SubCategories />}></Route>
         <Route path="/cart" element={<Cart />}></Route>
+        <Route path="/learning" element={<Learning />}></Route>
+        <Route path="/search" element={<Search />}></Route>
         <Route
           path="/personaldevelopment"
           element={<PersonalDevelopment />}

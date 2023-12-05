@@ -41,6 +41,12 @@ const Home = () => {
                   alt="not found"
                 />
               ))}
+          <div className="AdvertisementImg">
+            <img
+              src="https://img-c.udemycdn.com/notices/web_carousel_slide/image/a7e5c86e-fafa-4029-b2af-570d7bd4a573.jpg"
+              alt="not found"
+            />
+          </div>
           <div className="text">
             <div className="AdvertimsementText">The skills you need</div>
             <span className="text2">
@@ -146,13 +152,13 @@ const Home = () => {
           sites to apps. Choose from a range of courses that will appeal to...
         </p>
         <button className="Pythonbutton">Explore</button>
-        <div className="MainContainer">
+        <div className="MainContainer1">
           {one &&
             one
               .filter((item) => item.id >= 79 && item.id <= 100)
               .slice(0, 4)
               .map((item, index) => (
-                <div className="child_container anotherchild" key={index}>
+                <div className="child_container1 anotherchild" key={index}>
                   <div className="laptop_div">
                     <img
                       className="MainImage"
@@ -506,7 +512,7 @@ const Home = () => {
             />
           </div>
           <div className="TeacherText">
-            <h1>Become an instructor</h1>
+            <h1 className="BecomeA">Become an instructor</h1>
             <p className="instructorforTeacher">
               Instructors from around the world teach millions of learners on
               Udemy. We provide the tools and skills to teach what you love.

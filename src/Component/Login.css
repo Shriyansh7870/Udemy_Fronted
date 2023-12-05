@@ -135,15 +135,21 @@ body {
 
 /* Responsive styles */
 @media (max-width: 600px) {
-  .loginform {
-    width: 100%;
-    box-sizing: border-box;
+  .center {
+    border: 1px solid red;
   }
-}
-
-@media (max-width: 600px) {
-  .loginform {
+  .heading {
+    text-align: center;
     width: 100%;
-    box-sizing: border-box;
+    position: relative;
+    top: -60px;
+  }
+  .loginform {
+    position: relative;
+    top: -100px;
+    width: 400px;
+  }
+  .center {
+    top: -60px;
   }
 }

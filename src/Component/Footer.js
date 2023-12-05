@@ -9,7 +9,7 @@ const Footer = () => {
             <h2>Udemy </h2>
             <p className="footertext">
               To learn more about TreatWoo, I recommend visiting the website
-              directly or searching for recent Product, Clothes, or user
+              directly or searching for recent Viedo, Lifestyle, and many more
             </p>
           </div>
           <div className="footer-section">

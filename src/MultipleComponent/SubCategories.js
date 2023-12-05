@@ -39,7 +39,7 @@ const SubCategories = () => {
   ];
   return (
     <>
-      <div className=" navbar">
+      <div className=" navbar1">
         <div className="navabarSecond">
           <div>Web Development➡️</div>
           <div>Data Science</div>
