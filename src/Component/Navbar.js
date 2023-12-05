@@ -30,10 +30,6 @@ const Navbar = () => {
   const [results, setResults] = useState([]);
   const [query, setQuery] = useState("");
   const [cartItems, setCartItems] = useState();
-  useEffect(() => {
-    const nameDescription = localStorage.getItem("name");
-    setLoginState(nameDescription);
-  }, []);
 
   const arr1 = [
     "Web Development",
@@ -94,6 +90,7 @@ const Navbar = () => {
   ];
   const handleLogOut = () => {
     localStorage.clear();
+    window.location.reload(true);
   };
   const HandleChange = (e) => {
     const inputValue = e.target.value;
@@ -112,13 +109,15 @@ const Navbar = () => {
     axios
       .get("https://udemy-backend-kutp.onrender.com/api/getaddCart")
       .then((res) => {
-        // setCartItems(res.data.length);
         const length = res.data.length;
         setCartItems(length);
       })
       .catch((err) => console.error(err));
   }, []);
-
+  useEffect(() => {
+    const nameDescription = localStorage.getItem("name");
+    setLoginState(nameDescription);
+  }, []);
   return (
     <>
       <div className="navbar">
@@ -155,66 +154,129 @@ const Navbar = () => {
 
                   <ul className="MobilenavbarMainUl">
                     <NavLink to="/webdevelopment">
-                      <li className="subData">
+                      <li className="">
                         Web Development
-                        <div className="MobilenavbarMainSubData">
-                          <ul>
-                            <li>sub data 1</li>
-                          </ul>
-                        </div>
+                        <ul className="">
+                          {arr1.map((item, index) => {
+                            return (
+                              <NavLink to={`/subcategory/${item}`}>
+                                <li key={index}>{item}</li>
+                              </NavLink>
+                            );
+                          })}
+                        </ul>
                       </li>
                     </NavLink>
                     <NavLink to="/Business">
-                      <li className="subData">
+                      <li className="">
                         Business
-                        <div
-                          className="MobilenavbarMainSubData"
-                          onClick={() => setOpen(!open)}
-                        >
-                          sub data
-                        </div>
+                        <ul className="">
+                          {arr2.map((item, index) => {
+                            return (
+                              <NavLink to={`/subcategory/${item}`}>
+                                <li key={index}>{item}</li>
+                              </NavLink>
+                            );
+                          })}
+                        </ul>
                       </li>
                     </NavLink>
                     <NavLink to="/finance">
-                      <li className="subData">
+                      <li className="">
                         Finance & Accounting
-                        <div className="MobilenavbarMainSubData">sub data</div>
+                        <ul className="">
+                          {arr3.map((item, index) => {
+                            return (
+                              <NavLink to={`/subcategory/${item}`}>
+                                <li key={index}>{item}</li>
+                              </NavLink>
+                            );
+                          })}
+                        </ul>
                       </li>
                     </NavLink>
                     <NavLink to="/it">
-                      <li className="subData">
+                      <li className="">
                         IT & Software
-                        <div className="MobilenavbarMainSubData">sub data</div>
+                        <ul className="">
+                          {arr4.map((item, index) => {
+                            return (
+                              <NavLink to={`/subcategory/${item}`}>
+                                <li key={index}>{item}</li>
+                              </NavLink>
+                            );
+                          })}
+                        </ul>
                       </li>
                     </NavLink>
                     <NavLink to="/office">
-                      <li className="subData">
+                      <li className="">
                         Office Productivity
-                        <div className="MobilenavbarMainSubData">sub data</div>
+                        <ul className="">
+                          {arr5.map((item, index) => {
+                            return (
+                              <NavLink to={`/subcategory/${item}`}>
+                                <li key={index}>{item}</li>
+                              </NavLink>
+                            );
+                          })}
+                        </ul>
                       </li>
                     </NavLink>
                     <NavLink to="/personaldevelopment">
-                      <li className="subData">
+                      <li className="">
                         Personal Development
-                        <div className="MobilenavbarMainSubData">sub data</div>
+                        <ul className="">
+                          {arr6.map((item, index) => {
+                            return (
+                              <NavLink to={`/subcategory/${item}`}>
+                                <li key={index}>{item}</li>
+                              </NavLink>
+                            );
+                          })}
+                        </ul>
                       </li>
                     </NavLink>
                     <NavLink to="/marketing">
-                      <li className="subData">
+                      <li className="">
                         Marketing
-                        <div className="MobilenavbarMainSubData">sub data</div>
+                        <ul className="">
+                          {arr7.map((item, index) => {
+                            return (
+                              <NavLink to={`/subcategory/${item}`}>
+                                <li key={index}>{item}</li>
+                              </NavLink>
+                            );
+                          })}
+                        </ul>
                       </li>
                     </NavLink>
                     <NavLink to="/health">
-                      <li className="subData">
+                      <li className="">
                         Health & Fitness
-                        <div className="MobilenavbarMainSubData">sub data</div>
+                        <ul className="">
+                          {arr8.map((item, index) => {
+                            return (
+                              <NavLink to={`/subcategory/${item}`}>
+                                <li key={index}>{item}</li>
+                              </NavLink>
+                            );
+                          })}
+                        </ul>
                       </li>
                     </NavLink>
                     <NavLink to="/music">
-                      <li className="subData">
+                      <li className="">
                         Music
-                        <div className="MobilenavbarMainSubData">sub data</div>
+                        <ul className="">
+                          {arr9.map((item, index) => {
+                            return (
+                              <NavLink to={`/subcategory/${item}`}>
+                                <li key={index}>{item}</li>
+                              </NavLink>
+                            );
+                          })}
+                        </ul>
                       </li>
                     </NavLink>
                   </ul>

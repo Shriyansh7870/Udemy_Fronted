@@ -242,6 +242,7 @@ li {
   z-index: 20;
   transform: translateX(-100%);
   transition: all 200ms ease;
+  display: block;
 }
 
 .MobileNavbarContentData {
@@ -252,6 +253,10 @@ li {
   position: relative;
   overflow: hidden;
   margin-left: 0px;
+}
+.MobileNavbarContent:hover {
+  display: none;
+  transform: translateX(100%);
 }
 .crossbutton {
   margin-left: 200px;
@@ -289,23 +294,10 @@ li {
 }
 .MobilenavbarMainUl {
   list-style: none;
+  height: 100vh;
 }
-
+.MobilenavbarMainUl:hover {
+}
 .MobilenavbarMainUl > li {
   cursor: pointer;
-}
-
-.MobilenavbarMainSubData {
-  transform: translateX(-100%);
-  position: absolute;
-  right: 0;
-  height: 100%;
-  background-color: white;
-  top: 0;
-  transition: all 200ms linear;
-  width: 100%;
-}
-
-.subData.subDataOpen .MobilenavbarMainSubData {
-  transform: translateX(100%);
 }

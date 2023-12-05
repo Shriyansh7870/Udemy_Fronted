@@ -21,12 +21,13 @@ function LogIn() {
     axios
       .post("https://udemy-backend-kutp.onrender.com/api/login", data)
       .then((res) => {
-        alert(res.data.msg);
         localStorage.setItem("token", res.data.token);
         localStorage.setItem("name", res.data.name);
         console.log(res.data);
         if (res.data.token) {
-          navigate("/");
+          setTimeout(() => {
+            alert(res.data.msg, navigate("/"));
+          }, 3000);
         } else {
           navigate("/login");
         }
