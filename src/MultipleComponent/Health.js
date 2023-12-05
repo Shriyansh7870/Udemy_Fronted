@@ -7,6 +7,7 @@ import Footer from "../Component/Footer";
 const Health = () => {
   const [data, setData] = useState([]);
   const [data1, setData1] = useState([]);
+  const [items, setItem] = useState([]);
   const popular = [
     "Digital Marketing",
     "Social Media Marketing",
@@ -38,12 +39,21 @@ const Health = () => {
       })
       .catch((err) => console.log(err, "error"));
   }, []);
-  const userid = localStorage.getItem("userId");
   const handleAddToCart = async (item) => {
-    await axios.post(
-      "https://udemy-backend-kutp.onrender.com/api/addToCart",
-      (item, userid)
-    );
+    const letsfind = items.find((items) => items.id === item.id);
+    console.log(items);
+    if (letsfind) {
+      alert("items is already added Go to cart");
+    } else {
+      await axios.post(
+        "https://udemy-backend-kutp.onrender.com/api/addtoCart",
+        item
+      );
+    }
+    axios
+      .get("https://udemy-backend-kutp.onrender.com/api/getaddCart")
+      .then((res) => setItem(res.data));
+    console.log(letsfind);
   };
 
   return (
@@ -84,7 +94,7 @@ const Health = () => {
                   className="AddToCartButton"
                   onClick={() => handleAddToCart(item)}
                 >
-                  Add to Cart
+                  AddToCart
                 </button>
               </div>
             ))}
@@ -116,7 +126,7 @@ const Health = () => {
                     className="AddToCartButton"
                     onClick={() => handleAddToCart(item)}
                   >
-                    Add to Cart
+                    AddToCart
                   </button>
                 </div>
               </div>
@@ -224,9 +234,9 @@ const Health = () => {
                       <div className="Bestseller">Best Seller</div>
                       <button
                         className="AddToCartButton"
-                        onClick={() => handleAddToCart(item.name)}
+                        onClick={() => handleAddToCart(item)}
                       >
-                        Add to Cart
+                        AddToCart
                       </button>
                     </div>
                   </div>

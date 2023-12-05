@@ -8,6 +8,7 @@ const SubCategories = () => {
   const newOne = params.name;
   const [data, setData] = useState([]);
   const [kuchv, setKuchv] = useState([]);
+  const [items, setItem] = useState([]);
 
   useEffect(() => {
     axios
@@ -15,14 +16,33 @@ const SubCategories = () => {
       .then((res) => setData(res.data))
       .catch((err) => console.error(err));
   }, [params]);
+  useEffect(() => {
+    axios
+      .get("https://udemy-backend-kutp.onrender.com/api/getaddCart")
+      .then((res) => setItem(res.data))
+      .catch((err) => console.log("cart error", err));
+  }, []);
+
+  const handleAddToCart = async (item) => {
+    const letsfind = items.find((items) => items.id === item.id);
+    console.log(items);
+    if (letsfind) {
+      alert("items is already added Go to cart");
+    } else {
+      await axios.post(
+        "https://udemy-backend-kutp.onrender.com/api/addtoCart",
+        item
+      );
+    }
+    axios
+      .get("https://udemy-backend-kutp.onrender.com/api/getaddCart")
+      .then((res) => setItem(res.data));
+    console.log(letsfind);
+  };
 
   useEffect(() => {
     setKuchv(data.filter((item) => item.name === newOne));
   }, [data, newOne]);
-
-  const handleAddToCart = (itemName) => {
-    console.log(`Added ${itemName} to the cart`);
-  };
   const popular = [
     "Digital Marketing",
     "Social Media Marketing",
@@ -70,9 +90,9 @@ const SubCategories = () => {
 
                 <button
                   className="AddToCartButton"
-                  onClick={() => handleAddToCart(item.name)}
+                  onClick={() => handleAddToCart(item)}
                 >
-                  Add to Cart
+                  AddToCart
                 </button>
               </div>
             ))}
@@ -99,9 +119,9 @@ const SubCategories = () => {
 
                 <button
                   className="AddToCartButton"
-                  onClick={() => handleAddToCart(item.name)}
+                  onClick={() => handleAddToCart(item)}
                 >
-                  Add to Cart
+                  AddToCart
                 </button>
               </div>
             </div>
@@ -192,9 +212,9 @@ const SubCategories = () => {
                     <div className="Bestseller">Best Seller</div>
                     <button
                       className="AddToCartButton"
-                      onClick={() => handleAddToCart(item.name)}
+                      onClick={() => handleAddToCart(item)}
                     >
-                      Add to Cart
+                      AddToCart
                     </button>
                   </div>
                 </div>

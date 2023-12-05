@@ -103,9 +103,6 @@ const Cart = () => {
               </div>
             ))}
         </div>
-        <div className="total">
-          <h2>Total={sum}</h2>
-        </div>
         <div className="buy">
           <button onClick={stripePayment}>checkout</button>
         </div>

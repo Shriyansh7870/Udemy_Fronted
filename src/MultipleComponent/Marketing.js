@@ -7,6 +7,7 @@ import Footer from "../Component/Footer";
 const Marketing = () => {
   const [data, setData] = useState([]);
   const [data1, setData1] = useState([]);
+  const [items, setItem] = useState([]);
   const popular = [
     "Digital Marketing",
     "Social Media Marketing",
@@ -39,8 +40,21 @@ const Marketing = () => {
       .catch((err) => console.log(err, "error"));
   }, []);
 
-  const handleAddToCart = (itemName) => {
-    console.log(`Added ${itemName} to the cart`);
+  const handleAddToCart = async (item) => {
+    const letsfind = items.find((items) => items.id === item.id);
+    console.log(items);
+    if (letsfind) {
+      alert("items is already added Go to cart");
+    } else {
+      await axios.post(
+        "https://udemy-backend-kutp.onrender.com/api/addtoCart",
+        item
+      );
+    }
+    axios
+      .get("https://udemy-backend-kutp.onrender.com/api/getaddCart")
+      .then((res) => setItem(res.data));
+    console.log(letsfind);
   };
 
   return (
@@ -79,9 +93,9 @@ const Marketing = () => {
 
                 <button
                   className="AddToCartButton"
-                  onClick={() => handleAddToCart(item.name)}
+                  onClick={() => handleAddToCart(item)}
                 >
-                  Add to Cart
+                  AddToCart
                 </button>
               </div>
             ))}
@@ -108,12 +122,11 @@ const Marketing = () => {
                   <div className="instructorname">{item.instructor}</div>
                   <div className="singleRating">{item.Rating}⭐⭐⭐⭐⭐</div>
                   <div className="singlePrice">{item.price}</div>
-
                   <button
                     className="AddToCartButton"
-                    onClick={() => handleAddToCart(item.name)}
+                    onClick={() => handleAddToCart(item)}
                   >
-                    Add to Cart
+                    AddToCart
                   </button>
                 </div>
               </div>
@@ -222,9 +235,9 @@ const Marketing = () => {
                       <div className="Bestseller">Best Seller</div>
                       <button
                         className="AddToCartButton"
-                        onClick={() => handleAddToCart(item.name)}
+                        onClick={() => handleAddToCart(item)}
                       >
-                        Add to Cart
+                        AddToCart
                       </button>
                     </div>
                   </div>
