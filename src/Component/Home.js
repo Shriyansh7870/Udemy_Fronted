@@ -41,8 +41,9 @@ const Home = () => {
                   alt="not found"
                 />
               ))}
-          <div className="AdvertisementImg">
+          <div>
             <img
+              className="AdvertisementImg"
               src="https://img-c.udemycdn.com/notices/web_carousel_slide/image/a7e5c86e-fafa-4029-b2af-570d7bd4a573.jpg"
               alt="not found"
             />

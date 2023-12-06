@@ -7,7 +7,6 @@ body {
   border-bottom: 1px solid #eee;
   padding: 15px 0;
   height: 10vh;
-  box-shadow: 2px 2px 4px gray;
 }
 a {
   text-decoration: none;
@@ -187,17 +186,19 @@ a {
 .categoriesGrandChildWrap {
   position: absolute;
   background-color: white;
-  border-bottom: 4px solid #ccc;
+  border-bottom: 1px solid #ccc;
+
   opacity: 0;
   pointer-events: none;
   transition: all 300ms ease;
-  list-style: none;
   left: 100%;
   padding: 0;
   top: 77px;
-  min-height: 32vh;
+  min-height: 58vh;
   width: 16vw;
   margin-left: 2px;
+  border: 1px solid black;
+  border-bottom: 1px solid #ccc;
 }
 
 .categoriesChildContent:hover .categoriesGrandChildWrap {
@@ -247,8 +248,8 @@ li {
 
 .MobileNavbarContentData {
   background-color: white;
-  height: 100%;
   width: fit-content;
+  height: 1800px;
   min-width: 280px;
   position: relative;
   overflow: hidden;
@@ -280,12 +281,18 @@ li {
 }
 
 @media screen and (max-width: 800px) {
+  * {
+    overflow-x: hidden;
+  }
   .categories,
   .udemyBussiness,
   .udemyTech,
   .Login,
   .Sign,
   .world {
+    display: none;
+  }
+  .ParentCategories {
     display: none;
   }
 }

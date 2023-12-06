@@ -451,14 +451,20 @@ p {
 }
 
 /**********************************MediaQuer**********************************************/
+
 @media screen and (max-width: 800px) {
   * {
     margin: auto;
     box-sizing: border-box;
-    overflow-x: hidden;
   }
   .Advertimsement {
+    width: auto;
+  }
+  .AdvertisementImg {
     width: 100%;
+    object-fit: cover;
+    object-position: center top;
+    height: 300px;
   }
   .text {
     display: none;
@@ -538,6 +544,7 @@ p {
   .firstoneadvertisment2 {
     width: 350px;
     height: 200px;
+    margin-left: 0px;
   }
   .Advertisment2 {
     display: flex;

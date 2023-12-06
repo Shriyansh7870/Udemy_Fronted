@@ -24,6 +24,7 @@ import Learning from "./Learnig";
 import { IoSearchOutline } from "react-icons/io5";
 import axios from "axios";
 import Search from "./Search";
+import Engineering from "../MultipleComponent/Engineering";
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [loginstate, setLoginState] = useState("");
@@ -88,6 +89,13 @@ const Navbar = () => {
     "Vocal",
     "Music Techniques",
   ];
+  const arr10 = [
+    "Programming Language",
+    "Apple",
+    "Communication",
+    "Economics",
+    "IT Certificate",
+  ];
   const handleLogOut = () => {
     localStorage.clear();
     window.location.reload(true);
@@ -113,7 +121,7 @@ const Navbar = () => {
         setCartItems(length);
       })
       .catch((err) => console.error(err));
-  }, []);
+  }, [cartItems]);
   useEffect(() => {
     const nameDescription = localStorage.getItem("name");
     setLoginState(nameDescription);
@@ -448,6 +456,23 @@ const Navbar = () => {
                       </ul>
                     </NavLink>
                   </li>
+                  <li className="categoriesChildContent">
+                    <NavLink to="/Engineering">
+                      Engineering
+                      <span>
+                        <IoIosArrowForward />
+                      </span>
+                      <ul className="categoriesGrandChildWrap">
+                        {arr10.map((item, index) => {
+                          return (
+                            <NavLink to={`/subcategory/${item}`}>
+                              <li key={index}>{item}</li>
+                            </NavLink>
+                          );
+                        })}
+                      </ul>
+                    </NavLink>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -522,6 +547,7 @@ const Navbar = () => {
         <Route path="/cart" element={<Cart />}></Route>
         <Route path="/learning" element={<Learning />}></Route>
         <Route path="/search" element={<Search />}></Route>
+        <Route path="/Engineering" element={<Engineering />}></Route>
         <Route
           path="/personaldevelopment"
           element={<PersonalDevelopment />}
