@@ -111,6 +111,7 @@ h2 {
   display: flex;
   gap: 100px;
   padding: 10px;
+  flex-wrap: wrap;
 }
 .parentRating {
   display: flex;
@@ -196,11 +197,46 @@ h2 {
     margin-left: 100px;
   }
 }
-@media screen and (min-width: 800px) and (max-width: 1100px) {
+@media screen and (min-width: 700px) and (max-width: 1100px) {
+  body {
+    overflow-x: hidden;
+  }
+  .MainContainer {
+    gap: 30px;
+  }
   .leftRatingDiv {
     display: none;
   }
   .Instructor {
-    gap: 5px;
+    gap: 20px;
+  }
+  .singleCard {
+    flex-direction: column;
+    height: 600px;
+  }
+  .featuresImage {
+    width: 99% !important;
+  }
+  .carddescription {
+    font-size: 20px;
+  }
+  .AllImageForTeacher {
+    width: 50vw;
+    margin-left: 200px;
+  }
+  .Bestseller {
+    margin-left: 300px;
+    text-align: center;
+    width: 200px;
+  }
+  .AddToCartButton {
+    text-align: center;
+    width: 130px;
+  }
+}
+
+@media screen and (min-width: 110px) and (max-width: 1400px) {
+  .Instructor {
+    gap: 40px;
   }
 }
