@@ -161,13 +161,19 @@ const Navbar = () => {
                   <hr />
 
                   <ul className="MobilenavbarMainUl">
-                    <NavLink to="/webdevelopment">
+                    <NavLink
+                      to="/webdevelopment"
+                      onClick={() => setOpen(!open)}
+                    >
                       <li className="">
                         Web Development
                         <ul className="">
                           {arr1.map((item, index) => {
                             return (
-                              <NavLink to={`/subcategory/${item}`}>
+                              <NavLink
+                                to={`/subcategory/${item}`}
+                                onClick={() => setOpen(!open)}
+                              >
                                 <li key={index}>{item}</li>
                               </NavLink>
                             );
@@ -175,13 +181,16 @@ const Navbar = () => {
                         </ul>
                       </li>
                     </NavLink>
-                    <NavLink to="/Business">
+                    <NavLink to="/Business" onClick={() => setOpen(!open)}>
                       <li className="">
                         Business
                         <ul className="">
                           {arr2.map((item, index) => {
                             return (
-                              <NavLink to={`/subcategory/${item}`}>
+                              <NavLink
+                                to={`/subcategory/${item}`}
+                                onClick={() => setOpen(!open)}
+                              >
                                 <li key={index}>{item}</li>
                               </NavLink>
                             );
@@ -189,13 +198,16 @@ const Navbar = () => {
                         </ul>
                       </li>
                     </NavLink>
-                    <NavLink to="/finance">
+                    <NavLink to="/finance" onClick={() => setOpen(!open)}>
                       <li className="">
                         Finance & Accounting
                         <ul className="">
                           {arr3.map((item, index) => {
                             return (
-                              <NavLink to={`/subcategory/${item}`}>
+                              <NavLink
+                                to={`/subcategory/${item}`}
+                                onClick={() => setOpen(!open)}
+                              >
                                 <li key={index}>{item}</li>
                               </NavLink>
                             );
@@ -203,13 +215,16 @@ const Navbar = () => {
                         </ul>
                       </li>
                     </NavLink>
-                    <NavLink to="/it">
+                    <NavLink to="/it" onClick={() => setOpen(!open)}>
                       <li className="">
                         IT & Software
                         <ul className="">
                           {arr4.map((item, index) => {
                             return (
-                              <NavLink to={`/subcategory/${item}`}>
+                              <NavLink
+                                to={`/subcategory/${item}`}
+                                onClick={() => setOpen(!open)}
+                              >
                                 <li key={index}>{item}</li>
                               </NavLink>
                             );
@@ -217,13 +232,16 @@ const Navbar = () => {
                         </ul>
                       </li>
                     </NavLink>
-                    <NavLink to="/office">
+                    <NavLink to="/office" onClick={() => setOpen(!open)}>
                       <li className="">
                         Office Productivity
                         <ul className="">
                           {arr5.map((item, index) => {
                             return (
-                              <NavLink to={`/subcategory/${item}`}>
+                              <NavLink
+                                to={`/subcategory/${item}`}
+                                onClick={() => setOpen(!open)}
+                              >
                                 <li key={index}>{item}</li>
                               </NavLink>
                             );
@@ -231,13 +249,19 @@ const Navbar = () => {
                         </ul>
                       </li>
                     </NavLink>
-                    <NavLink to="/personaldevelopment">
+                    <NavLink
+                      to="/personaldevelopment"
+                      onClick={() => setOpen(!open)}
+                    >
                       <li className="">
                         Personal Development
                         <ul className="">
                           {arr6.map((item, index) => {
                             return (
-                              <NavLink to={`/subcategory/${item}`}>
+                              <NavLink
+                                to={`/subcategory/${item}`}
+                                onClick={() => setOpen(!open)}
+                              >
                                 <li key={index}>{item}</li>
                               </NavLink>
                             );
@@ -245,13 +269,16 @@ const Navbar = () => {
                         </ul>
                       </li>
                     </NavLink>
-                    <NavLink to="/marketing">
+                    <NavLink to="/marketing" onClick={() => setOpen(!open)}>
                       <li className="">
                         Marketing
                         <ul className="">
                           {arr7.map((item, index) => {
                             return (
-                              <NavLink to={`/subcategory/${item}`}>
+                              <NavLink
+                                to={`/subcategory/${item}`}
+                                onClick={() => setOpen(!open)}
+                              >
                                 <li key={index}>{item}</li>
                               </NavLink>
                             );
@@ -259,13 +286,16 @@ const Navbar = () => {
                         </ul>
                       </li>
                     </NavLink>
-                    <NavLink to="/health">
+                    <NavLink to="/health" onClick={() => setOpen(!open)}>
                       <li className="">
                         Health & Fitness
                         <ul className="">
                           {arr8.map((item, index) => {
                             return (
-                              <NavLink to={`/subcategory/${item}`}>
+                              <NavLink
+                                to={`/subcategory/${item}`}
+                                onClick={() => setOpen(!open)}
+                              >
                                 <li key={index}>{item}</li>
                               </NavLink>
                             );
@@ -273,13 +303,16 @@ const Navbar = () => {
                         </ul>
                       </li>
                     </NavLink>
-                    <NavLink to="/music">
+                    <NavLink to="/music" onClick={() => setOpen(!open)}>
                       <li className="">
                         Music
                         <ul className="">
                           {arr9.map((item, index) => {
                             return (
-                              <NavLink to={`/subcategory/${item}`}>
+                              <NavLink
+                                to={`/subcategory/${item}`}
+                                onClick={() => setOpen(!open)}
+                              >
                                 <li key={index}>{item}</li>
                               </NavLink>
                             );
@@ -305,14 +338,23 @@ const Navbar = () => {
               <div className="categoriesChildWrap">
                 <ul className="categoriesChild">
                   <li className="categoriesChildContent">
-                    <NavLink to="/webdevelopment"> Development</NavLink>
+                    <NavLink
+                      to="/webdevelopment"
+                      onClick={() => setOpen(!open)}
+                    >
+                      {" "}
+                      Development
+                    </NavLink>
                     <span>
                       <IoIosArrowForward />
                     </span>
                     <ul className="categoriesGrandChildWrap">
                       {arr1.map((item, index) => {
                         return (
-                          <NavLink to={`/subcategory/${item}`}>
+                          <NavLink
+                            to={`/subcategory/${item}`}
+                            onClick={() => setOpen(!open)}
+                          >
                             <li key={index}>{item}</li>
                           </NavLink>
                         );
@@ -321,7 +363,7 @@ const Navbar = () => {
                   </li>
 
                   <li className="categoriesChildContent">
-                    <NavLink to="/Business">
+                    <NavLink to="/Business" onClick={() => setOpen(!open)}>
                       Business
                       <span>
                         <IoIosArrowForward />
@@ -329,7 +371,10 @@ const Navbar = () => {
                       <ul className="categoriesGrandChildWrap">
                         {arr2.map((item, index) => {
                           return (
-                            <NavLink to={`/subcategory/${item}`}>
+                            <NavLink
+                              to={`/subcategory/${item}`}
+                              onClick={() => setOpen(!open)}
+                            >
                               <li key={index}>{item}</li>
                             </NavLink>
                           );
@@ -338,7 +383,7 @@ const Navbar = () => {
                     </NavLink>
                   </li>
                   <li className="categoriesChildContent">
-                    <NavLink to="/finance">
+                    <NavLink to="/finance" onClick={() => setOpen(!open)}>
                       Finance & Accounting
                       <span>
                         <IoIosArrowForward />
@@ -346,7 +391,10 @@ const Navbar = () => {
                       <ul className="categoriesGrandChildWrap">
                         {arr3.map((item, index) => {
                           return (
-                            <NavLink to={`/subcategory/${item}`}>
+                            <NavLink
+                              to={`/subcategory/${item}`}
+                              onClick={() => setOpen(!open)}
+                            >
                               <li key={index}>{item}</li>
                             </NavLink>
                           );
@@ -355,7 +403,7 @@ const Navbar = () => {
                     </NavLink>
                   </li>
                   <li className="categoriesChildContent">
-                    <NavLink to="/it">
+                    <NavLink to="/it" onClick={() => setOpen(!open)}>
                       IT & Software
                       <span>
                         <IoIosArrowForward />
@@ -363,7 +411,10 @@ const Navbar = () => {
                       <ul className="categoriesGrandChildWrap">
                         {arr4.map((item, index) => {
                           return (
-                            <NavLink to={`/subcategory/${item}`}>
+                            <NavLink
+                              to={`/subcategory/${item}`}
+                              onClick={() => setOpen(!open)}
+                            >
                               <li key={index}>{item}</li>
                             </NavLink>
                           );
@@ -372,7 +423,7 @@ const Navbar = () => {
                     </NavLink>
                   </li>
                   <li className="categoriesChildContent">
-                    <NavLink to="/office">
+                    <NavLink to="/office" onClick={() => setOpen(!open)}>
                       Office Productivity
                       <span>
                         <IoIosArrowForward />
@@ -380,7 +431,10 @@ const Navbar = () => {
                       <ul className="categoriesGrandChildWrap">
                         {arr5.map((item, index) => {
                           return (
-                            <NavLink to={`/subcategory/${item}`}>
+                            <NavLink
+                              to={`/subcategory/${item}`}
+                              onClick={() => setOpen(!open)}
+                            >
                               <li key={index}>{item}</li>
                             </NavLink>
                           );
@@ -389,7 +443,10 @@ const Navbar = () => {
                     </NavLink>
                   </li>
                   <li className="categoriesChildContent">
-                    <NavLink to="/personaldevelopment">
+                    <NavLink
+                      to="/personaldevelopment"
+                      onClick={() => setOpen(!open)}
+                    >
                       Personal Development
                       <span>
                         <IoIosArrowForward />
@@ -397,7 +454,10 @@ const Navbar = () => {
                       <ul className="categoriesGrandChildWrap">
                         {arr6.map((item, index) => {
                           return (
-                            <NavLink to={`/subcategory/${item}`}>
+                            <NavLink
+                              to={`/subcategory/${item}`}
+                              onClick={() => setOpen(!open)}
+                            >
                               <li key={index}>{item}</li>
                             </NavLink>
                           );
@@ -406,7 +466,7 @@ const Navbar = () => {
                     </NavLink>
                   </li>
                   <li className="categoriesChildContent">
-                    <NavLink to="/marketing">
+                    <NavLink to="/marketing" onClick={() => setOpen(!open)}>
                       Marketing
                       <span>
                         <IoIosArrowForward />
@@ -414,7 +474,10 @@ const Navbar = () => {
                       <ul className="categoriesGrandChildWrap">
                         {arr7.map((item, index) => {
                           return (
-                            <NavLink to={`/subcategory/${item}`}>
+                            <NavLink
+                              to={`/subcategory/${item}`}
+                              onClick={() => setOpen(!open)}
+                            >
                               <li key={index}>{item}</li>
                             </NavLink>
                           );
@@ -423,7 +486,7 @@ const Navbar = () => {
                     </NavLink>
                   </li>
                   <li className="categoriesChildContent">
-                    <NavLink to="/health">
+                    <NavLink to="/health" onClick={() => setOpen(!open)}>
                       Health & Fitness
                       <span>
                         <IoIosArrowForward />
@@ -431,7 +494,10 @@ const Navbar = () => {
                       <ul className="categoriesGrandChildWrap">
                         {arr8.map((item, index) => {
                           return (
-                            <NavLink to={`/subcategory/${item}`}>
+                            <NavLink
+                              to={`/subcategory/${item}`}
+                              onClick={() => setOpen(!open)}
+                            >
                               <li key={index}>{item}</li>
                             </NavLink>
                           );
@@ -440,7 +506,7 @@ const Navbar = () => {
                     </NavLink>
                   </li>
                   <li className="categoriesChildContent">
-                    <NavLink to="/music">
+                    <NavLink to="/music" onClick={() => setOpen(!open)}>
                       Music
                       <span>
                         <IoIosArrowForward />
@@ -448,7 +514,10 @@ const Navbar = () => {
                       <ul className="categoriesGrandChildWrap">
                         {arr9.map((item, index) => {
                           return (
-                            <NavLink to={`/subcategory/${item}`}>
+                            <NavLink
+                              to={`/subcategory/${item}`}
+                              onClick={() => setOpen(!open)}
+                            >
                               <li key={index}>{item}</li>
                             </NavLink>
                           );
@@ -457,7 +526,7 @@ const Navbar = () => {
                     </NavLink>
                   </li>
                   <li className="categoriesChildContent">
-                    <NavLink to="/Engineering">
+                    <NavLink to="/Engineering" onClick={() => setOpen(!open)}>
                       Engineering
                       <span>
                         <IoIosArrowForward />
@@ -465,7 +534,10 @@ const Navbar = () => {
                       <ul className="categoriesGrandChildWrap">
                         {arr10.map((item, index) => {
                           return (
-                            <NavLink to={`/subcategory/${item}`}>
+                            <NavLink
+                              to={`/subcategory/${item}`}
+                              onClick={() => setOpen(!open)}
+                            >
                               <li key={index}>{item}</li>
                             </NavLink>
                           );
