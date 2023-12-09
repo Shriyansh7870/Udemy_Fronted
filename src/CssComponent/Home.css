@@ -466,6 +466,10 @@ p {
     object-position: center top;
     height: 300px;
   }
+
+  .laptop_div {
+    font-size: 20px;
+  }
   .text {
     display: none;
     font-size: 18px;
@@ -492,6 +496,10 @@ p {
     text-align: center;
     position: relative;
     height: auto;
+    width: 380px;
+  }
+  .AddToCart {
+    height: 20px;
   }
   .commentContainer {
     margin-top: 10px;

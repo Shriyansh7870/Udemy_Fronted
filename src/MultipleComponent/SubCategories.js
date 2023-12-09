@@ -70,9 +70,9 @@ const SubCategories = () => {
       </div>
       <div className="parentConatinerForAll">
         <div className="mainContain">
-          <h1>Business Courses</h1>
-          <h2>Courses to get you started</h2>
-          <h3>Most Popular</h3>
+          <h1 className="nameofType">Sub SubCategories</h1>
+          <h2 className="nameofType">Courses to get you started</h2>
+          <h3 className="nameofType">Most Popular</h3>
         </div>
         <div className="MainContainer">
           {kuchv
@@ -83,9 +83,11 @@ const SubCategories = () => {
                 <div className="laptop_div">
                   <img className="MainImage" src={item.image} alt="Not Found" />
                 </div>
-                <div>{item.description.slice(0, 50)}</div>
+                <div className="nameofType">
+                  {item.description.slice(0, 50)}
+                </div>
                 <div className="LaptopmodelName">{item.instructor}</div>
-                <div className="">{item.Rating}⭐⭐⭐⭐⭐</div>
+                <div className="singleRating">{item.Rating}⭐⭐⭐⭐⭐</div>
                 <div className="Price-of-All">{item.price}</div>
 
                 <button
@@ -97,7 +99,7 @@ const SubCategories = () => {
               </div>
             ))}
         </div>
-        <h1>Featured course</h1>
+        <h1 className="nameofType">Featured course</h1>
         <div className="Features">
           {kuchv.slice(0, 1).map((item, index) => (
             <div className="singleCard" key={index}>
@@ -110,7 +112,7 @@ const SubCategories = () => {
               </div>
 
               <div className="carddescription">
-                <div>{item.name}</div>
+                <div className="nameofType">{item.name}</div>
                 {item.description}
 
                 <div className="instructorname">{item.instructor}</div>
@@ -127,7 +129,7 @@ const SubCategories = () => {
             </div>
           ))}
         </div>
-        <h1>Popular topics</h1>
+        <h1 className="nameofType">Popular topics</h1>
         <div className="PopularToic">
           {popular.map((item, index) => {
             return (
@@ -146,7 +148,7 @@ const SubCategories = () => {
             );
           })}
         </div>
-        <h2>Popular Instructors</h2>
+        <h2 className="nameofType">Popular Instructors</h2>
 
         <div className="Instructor">
           {kuchv.slice(0, 5).map((item, index) => (
@@ -154,9 +156,11 @@ const SubCategories = () => {
               <div className="laptop_div">
                 <img className="MainImage" src={item.image} alt="Not Found" />
               </div>
-              <div>{item.description.slice(0, 50)}</div>
+              <div className="nameofDescription">
+                {item.description.slice(0, 50)}
+              </div>
               <div className="LaptopmodelName">{item.instructor}</div>
-              <div className="">{item.Rating}⭐⭐⭐⭐⭐</div>
+              <div className="singleRating">{item.Rating}⭐⭐⭐⭐⭐</div>
             </div>
           ))}
         </div>
@@ -203,8 +207,8 @@ const SubCategories = () => {
                   </div>
 
                   <div className="carddescription">
-                    <h3>{item.type}</h3>
-                    {item.description}
+                    <h3 className="nameOfType">{item.type}</h3>
+                    <div className="nameofDescription">{item.description}</div>
 
                     <div className="instructorname">{item.instructor}</div>
                     <div className="singleRating">{item.Rating}⭐⭐⭐⭐⭐</div>

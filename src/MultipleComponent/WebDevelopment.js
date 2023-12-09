@@ -78,9 +78,9 @@ const WebDevelopment = () => {
       <div className="check">
         <div className="parentConatinerForAll">
           <div className="mainContain">
-            <h1>Web Development Courses</h1>
-            <h2>Courses to get you started</h2>
-            <h3>Most Popular</h3>
+            <h1 className="nameofType">Web Development Courses</h1>
+            <h2 className="nameofItem">Courses to get you started</h2>
+            <h3 className="nameofType">Most Popular</h3>
           </div>
           <div className="MainContainer">
             {data
@@ -95,11 +95,15 @@ const WebDevelopment = () => {
                       alt="Not Found"
                     />
                   </div>
-                  <div>{item.name.slice(0, 50)}</div>
-                  <div>{item.type.slice(0, 50)}</div>
-                  <div>{item.description.slice(0, 50)}</div>
+                  <div className="nameofItem">{item.name.slice(0, 50)}</div>
+                  <div className="nameofType">{item.type.slice(0, 50)}</div>
+                  <div className="nameOfDescription">
+                    {item.description.slice(0, 50)}
+                  </div>
                   <div className="LaptopmodelName">{item.instructor}</div>
-                  <div className="">{item.Rating}⭐⭐⭐⭐⭐</div>
+                  <div className="nameofRatingandStar">
+                    {item.Rating}⭐⭐⭐⭐⭐
+                  </div>
                   <div className="Price-of-All">{item.price}</div>
 
                   <button
@@ -111,7 +115,7 @@ const WebDevelopment = () => {
                 </div>
               ))}
           </div>
-          <h1>Featured course</h1>
+          <h1 className="featureCourse">Featured course</h1>
           <div className="Features">
             {data
               .filter((item) => item.id === "5")
@@ -127,8 +131,8 @@ const WebDevelopment = () => {
                   </div>
 
                   <div className="carddescription">
-                    <div>{item.name}</div>
-                    {item.description}
+                    <div className="nameofItem1">{item.name}</div>
+                    <div className="nameofDescription">{item.description}</div>
 
                     <div className="instructorname">{item.instructor}</div>
                     <div className="singleRating">{item.Rating}⭐⭐⭐⭐⭐</div>
@@ -169,7 +173,7 @@ const WebDevelopment = () => {
               );
             })}
           </div>
-          <h2>Popular Instructors</h2>
+          <h2 className="featureCourse">Popular Instructors</h2>
 
           <div className="Instructor">
             {data1
@@ -187,7 +191,7 @@ const WebDevelopment = () => {
                   <div className="LaptopmodelName">{item.name}</div>
                   <div className="subject">{item.subject}</div>
                   <div className="course">{item.number}</div>
-                  <div className="">{item.Rating}⭐⭐⭐⭐⭐</div>
+                  <div className="singleRating">{item.Rating}⭐⭐⭐⭐⭐</div>
                 </div>
               ))}
           </div>
@@ -237,9 +241,13 @@ const WebDevelopment = () => {
                       </div>
 
                       <div className="carddescription">
-                        <h3>{item.name}</h3>
-                        {item.description}
-                        <div>{item.type.slice(0, 50)}</div>
+                        <h3 className="nameofItem">{item.name}</h3>
+                        <div className="nameOfDescription">
+                          {item.description}
+                        </div>
+                        <div className="nameofType">
+                          {item.type.slice(0, 50)}
+                        </div>
                         <div className="instructorname">{item.instructor}</div>
                         <div className="singleRating">
                           {item.Rating}⭐⭐⭐⭐⭐

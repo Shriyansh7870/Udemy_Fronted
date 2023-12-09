@@ -84,9 +84,11 @@ const Music = () => {
                 <div className="laptop_div">
                   <img className="MainImage" src={item.image} alt="Not Found" />
                 </div>
-                <div>{item.name.slice(0, 50)}</div>
-                <div>{item.type}</div>
-                <div>{item.description.slice(0, 50)}</div>
+                <div className="nameofItem">{item.name.slice(0, 50)}</div>
+                <div className="nameofType">{item.type.slice(0, 50)}</div>
+                <div className="nameOfDescription">
+                  {item.description.slice(0, 50)}
+                </div>
                 <div className="LaptopmodelName">{item.instructor}</div>
                 <div className="">{item.Rating}⭐⭐⭐⭐⭐</div>
                 <div className="Price-of-All">{item.price}</div>
