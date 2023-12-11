@@ -27,6 +27,7 @@ function LogIn() {
         if (res.data.token) {
           setTimeout(() => {
             alert(res.data.msg, navigate("/"));
+            window.location.reload();
           }, 3000);
         } else {
           navigate("/login");

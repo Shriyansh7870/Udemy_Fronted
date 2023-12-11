@@ -57,7 +57,6 @@ body {
   justify-content: center;
   align-items: center;
   width: 80vw;
-  height: 48vh;
   position: relative;
   flex-wrap: wrap;
 }
@@ -454,17 +453,42 @@ p {
 
 @media screen and (max-width: 700px) {
   * {
-    margin: auto;
+    margin: 0;
     box-sizing: border-box;
   }
   .Advertimsement {
-    width: auto;
+    height: 130px;
+    width: 100%;
+  }
+  .child_container1 {
+    height: 53vh;
+  }
+  .RatingofHome {
+    font-size: 20px;
+    text-align: center;
+  }
+  .itemOFDescription {
+    font-size: 24px;
+    text-align: center;
+  }
+  .coursetext {
+    margin: 0;
+    font-size: 24px;
+  }
+  .Pythonbutton {
+    width: 200px;
+    text-align: center;
+    margin-left: 75px;
+    font-size: 24px;
+  }
+  .NumberOfCourse {
+    margin: 0;
+    font-size: 23px;
   }
   .AdvertisementImg {
     width: 100%;
     object-fit: cover;
     object-position: center top;
-    height: 300px;
   }
 
   .laptop_div {
@@ -496,7 +520,7 @@ p {
     text-align: center;
     position: relative;
     height: auto;
-    width: 380px;
+    width: 100%;
   }
   .AddToCart {
     height: 20px;
@@ -526,8 +550,9 @@ p {
     margin: auto;
   }
   .CategoriesConatiner {
-    width: 100%;
+    width: 97%;
     flex-direction: column;
+    margin: auto;
   }
   .conatiner1 {
     max-width: 100%;

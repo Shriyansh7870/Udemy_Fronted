@@ -235,7 +235,6 @@ const Music = () => {
                         {item.Rating}⭐⭐⭐⭐⭐
                       </div>
                       <div className="singlePrice">{item.price}</div>
-                      <div className="Bestseller">Best Seller</div>
                       <button
                         className="AddToCartButton"
                         onClick={() => handleAddToCart(item)}

@@ -44,7 +44,7 @@ const Home = () => {
           <div>
             <img
               className="AdvertisementImg"
-              src="https://img-c.udemycdn.com/notices/web_carousel_slide/image/a7e5c86e-fafa-4029-b2af-570d7bd4a573.jpg"
+              src="	https://img-c.udemycdn.com/notices/web_carousel_slide/image/4346883a-110a-41aa-9de2-197f260fdef1.jpg"
               alt="not found"
             />
           </div>
@@ -167,9 +167,11 @@ const Home = () => {
                       alt="Not Found"
                     />
                   </div>
-                  <div>{item.description.slice(0, 50)}</div>
+                  <div className="itemOFDescription">
+                    {item.description.slice(0, 50)}
+                  </div>
                   <div className="LaptopmodelName">{item.instructor}</div>
-                  <div className="">{item.Rating}⭐⭐⭐⭐⭐</div>
+                  <div className="RatingofHome">{item.Rating}⭐⭐⭐⭐⭐</div>
                   <div className="Price-of-All">{item.price}</div>
 
                   <button
@@ -307,9 +309,11 @@ const Home = () => {
                       alt="Not Found"
                     />
                   </div>
-                  <div>{item.description.slice(0, 50)}</div>
+                  <div className="itemOFDescription">
+                    {item.description.slice(0, 50)}
+                  </div>
                   <div className="LaptopmodelName">{item.instructor}</div>
-                  <div className="">{item.Rating}⭐⭐⭐⭐⭐</div>
+                  <div className="RatingofHome">{item.Rating}⭐⭐⭐⭐⭐</div>
                   <div className="Price-of-All">{item.price}</div>
 
                   <button

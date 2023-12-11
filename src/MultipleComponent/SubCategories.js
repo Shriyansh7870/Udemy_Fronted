@@ -213,7 +213,6 @@ const SubCategories = () => {
                     <div className="instructorname">{item.instructor}</div>
                     <div className="singleRating">{item.Rating}⭐⭐⭐⭐⭐</div>
                     <div className="singlePrice">{item.price}</div>
-                    <div className="Bestseller">Best Seller</div>
                     <button
                       className="AddToCartButton"
                       onClick={() => handleAddToCart(item)}
