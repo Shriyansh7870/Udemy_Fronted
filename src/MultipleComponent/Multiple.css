@@ -53,7 +53,7 @@ h2 {
   border: 1px solid #ddd;
   padding: 20px;
   width: 240px;
-  height: 350px;
+  min-height: 400px;
   padding: 10px;
   text-align: center;
   position: relative;
@@ -144,6 +144,12 @@ h2 {
   .h1 {
     margin-left: 60px;
   }
+  .AddToCartButton {
+    border: 1px solid red;
+    position: relative;
+    margin-left: 115px;
+    margin-top: -20px;
+  }
   .CartPrice {
     top: 0px;
   }
@@ -156,7 +162,7 @@ h2 {
     padding: 20px;
     width: 300px;
     min-height: 250px;
-    min-height: 220px;
+    min-height: 400px;
     padding: 10px;
     margin: auto;
     text-align: center;
@@ -169,11 +175,11 @@ h2 {
   }
   .nameofType {
     text-align: center;
-    font-size: 28px;
+    font-size: 20px;
     font-weight: 400px;
   }
   .nameofDescription {
-    font-size: 25px;
+    font-size: 20px;
     text-align: center;
   }
   .carddescription {
@@ -223,8 +229,9 @@ h2 {
     gap: 15px;
   }
   .MainImage {
-    height: 175px;
+    height: 160px;
     width: 100%;
+    border-radius: 10px;
   }
   .navbar1 {
     display: none;
@@ -255,6 +262,7 @@ h2 {
   }
   .AllImageForTeacher {
     width: 100%;
+    border-radius: 10px;
   }
   .Bestseller {
     text-align: center;
@@ -262,18 +270,22 @@ h2 {
   }
 }
 @media screen and (min-width: 700px) and (max-width: 1000px) {
-  body {
-    overflow-x: hidden;
-  }
   .child_container {
-    height: 450px;
+    width: 100%;
+    height: 420px;
   }
   .nameofDescription {
     font-size: 24px;
     text-align: center;
   }
+  .AddToCartButton {
+    margin-left: 115px;
+    margin-top: -40px;
+  }
   .MainImage {
     width: 100%;
+    height: 220px;
+    border-radius: 10px;
   }
   .nameofType {
     font-size: 32px;
@@ -294,6 +306,7 @@ h2 {
   }
   .featuresImage {
     width: 99% !important;
+    border-radius: 10px;
   }
   .carddescription {
     font-size: 20px;
@@ -308,7 +321,8 @@ h2 {
   }
   .AllImageForTeacher {
     width: 100%;
-    height: 400px;
+    height: 300px;
+    border-radius: 10px;
   }
   .nameOfType {
     text-align: center;
@@ -328,19 +342,27 @@ h2 {
 
 @media screen and (min-width: 1020px) and (max-width: 1400px) {
   .Instructor {
-    flex-wrap: nowrap;
-    gap: 10px;
+    flex-wrap: wrap;
+    gap: 100px;
+  }
+  .AddToCartButton {
+    border: 1px solid red;
+    position: relative;
+    margin-left: 115px;
+    margin-top: -20px;
   }
   .nameofType {
-    text-align: center;
     font-size: 30px;
   }
   .categoriesGrandChildWrap {
     min-height: 28vh;
   }
   .MainContainer {
-    gap: 20px;
     flex-direction: row;
+    gap: 15px;
+  }
+  .AllImageForTeacher {
+    border-radius: 10px;
   }
   .singleCard {
     height: 100%;
@@ -352,11 +374,14 @@ h2 {
     margin-left: 250px;
   }
   .nameofType {
-    font-size: 24px;
+    font-size: 21px;
+    margin-left: 48px;
   }
   .child_container {
-    width: 600px;
     height: 100%;
+    width: 400px;
+    border-radius: 10px;
+    gap: 5px;
   }
   .nameOfDescription {
     font-size: 24px;
@@ -381,5 +406,19 @@ h2 {
   }
   .populartopicname {
     font-size: 20px;
+  }
+  .featuresImage {
+    border-radius: 10px;
+  }
+}
+@media screen and (max-width: 300px) {
+  .AddToCartButton {
+    border: 1px solid red;
+    position: relative;
+    margin-left: 70px;
+    margin-top: -20px;
+  }
+  .nameofDescription {
+    font-size: 13px;
   }
 }

@@ -446,18 +446,22 @@ p {
 @media screen and (max-width: 700px) {
   * {
     margin: 0;
-    box-sizing: border-box;
   }
   .Advertimsement {
     height: 130px;
     width: 100%;
+  }
+  .categroies {
+    text-align: center;
+  }
+  .commentContainer {
+    min-height: 0;
   }
   .RatingofHome {
     font-size: 20px;
     text-align: center;
   }
   .itemOFDescription {
-    font-size: 24px;
     text-align: center;
   }
   .coursetext {
@@ -487,6 +491,9 @@ p {
     display: none;
     font-size: 18px;
   }
+  .companyName {
+    margin-top: 10px;
+  }
   .List {
     font-size: 14px;
   }
@@ -498,15 +505,22 @@ p {
     width: 100%;
     margin: auto;
   }
-  .child_container {
+  .AddToCartButton {
+    border: 1px solid red;
+    position: relative;
+    margin-left: 70px;
+    margin-top: -20px;
+  }
+  .anotherchild {
     background-color: #fff;
     border: 1px solid #ddd;
     padding: 20px;
     padding: 10px;
     text-align: center;
     position: relative;
-    height: auto;
     width: 100%;
+    min-height: 340px;
+    border-radius: 10px;
   }
   .AddToCart {
     height: 20px;
@@ -514,7 +528,7 @@ p {
   .commentContainer {
     width: 100%;
     margin: auto;
-    min-height: 0;
+    height: 100%;
   }
   .mulipleConatiner {
     display: none;
@@ -525,7 +539,6 @@ p {
   .LearningContainer {
     height: 100%;
     margin: auto;
-    width: 100%;
   }
   .learningContent {
     flex-direction: column;
@@ -607,7 +620,7 @@ p {
     height: 50px;
   }
   .Teaching {
-    margin-left: 65px;
+    margin-left: 35px;
   }
   .instructorforTeacher {
     text-align: center;
@@ -668,8 +681,62 @@ p {
   }
 }
 
-@media screen and (min-width: 700px) and (max-width: 1100px) {
-  .child_container {
+@media screen and (min-width: 760px) and (max-width: 1000px) {
+  .Advertimsement {
+    width: 100%;
+  }
+  .text {
+    display: none;
+  }
+  .listOfCourse {
+    width: 100%;
+    margin: 0;
+  }
+  .Course {
+    font-size: 16px;
+  }
+  .comment1 {
+    height: 100%;
+  }
+  .LearningContainer {
+    width: 100%;
+    margin: 0;
+  }
+  .learningContent {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .Child_container {
+    width: 780px;
+    height: 375px;
+  }
+  .firstoneadvertisment2 {
     width: 350px;
+    height: 350px;
+  }
+  .Multiplebutton {
+    width: 400px;
+    height: auto;
+  }
+  .makingbutton {
+    width: 250px;
+  }
+}
+@media screen and (min-width: 1020px) and (max-width: 1400px) {
+  .LearningContainer {
+    width: 100%;
+    margin: 0;
+  }
+  .learningContent {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .anotherchild {
+    width: 500px;
+    height: 305px;
+  }
+  .MainImage {
+    width: 500px;
+    border-radius: 10px;
   }
 }

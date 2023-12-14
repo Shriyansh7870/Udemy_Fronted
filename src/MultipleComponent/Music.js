@@ -78,7 +78,6 @@ const Music = () => {
           {data
             .filter((item) => item.id >= 343 && item.id <= 360)
             .slice(0, 5)
-            .slice(0, 5)
             .map((item, index) => (
               <div className="child_container" key={index}>
                 <div className="laptop_div">

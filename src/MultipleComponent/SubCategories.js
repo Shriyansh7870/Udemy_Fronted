@@ -151,7 +151,7 @@ const SubCategories = () => {
         <h2 className="nameofType">Popular Instructors</h2>
 
         <div className="Instructor">
-          {kuchv.slice(0, 5).map((item, index) => (
+          {kuchv.slice(0, 4).map((item, index) => (
             <div className="child_container" key={index}>
               <div className="laptop_div">
                 <img className="MainImage" src={item.image} alt="Not Found" />

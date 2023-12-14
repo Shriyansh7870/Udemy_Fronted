@@ -140,7 +140,7 @@ const TechOnUdemy = () => {
         </div>
         <div className="middleTextLast">
           <h1>You won’t have to do it alone</h1>
-          <p>
+          <p className="our">
             Our Instructor Support Team is here to answer your questions and
             review your test video, while our Teaching Center gives you plenty
             of resources to help you through the process. Plus, get the support

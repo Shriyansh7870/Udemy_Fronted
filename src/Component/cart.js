@@ -102,10 +102,13 @@ const Cart = () => {
                 </button>
               </div>
             ))}
+          <div className="buy">
+            <button className="buyNow" onClick={stripePayment}>
+              checkout
+            </button>
+          </div>
         </div>
-        <div className="buy">
-          <button onClick={stripePayment}>checkout</button>
-        </div>
+
         <div></div>
       </div>
       <Footer />

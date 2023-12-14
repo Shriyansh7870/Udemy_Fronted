@@ -280,9 +280,6 @@ li {
 }
 
 @media screen and (max-width: 800px) {
-  * {
-    overflow-x: hidden;
-  }
   .categories,
   .udemyBussiness,
   .udemyTech,
