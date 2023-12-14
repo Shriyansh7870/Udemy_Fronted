@@ -41,6 +41,9 @@
   color: white;
 }
 @media (max-width: 668px) {
+  body {
+    overflow-x: hidden;
+  }
   .footer-content {
     flex-direction: column;
   }

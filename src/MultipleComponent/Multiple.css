@@ -138,6 +138,9 @@ h2 {
   display: block;
 }
 @media screen and (max-width: 620px) {
+  body {
+    overflow-x: hidden;
+  }
   .MainContainer1 {
     flex-direction: column;
   }
@@ -270,6 +273,9 @@ h2 {
   }
 }
 @media screen and (min-width: 700px) and (max-width: 1000px) {
+  body {
+    overflow-x: hidden;
+  }
   .child_container {
     width: 100%;
     height: 420px;

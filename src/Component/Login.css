@@ -142,14 +142,11 @@ body {
     text-align: center;
     width: 100%;
     position: relative;
-    top: -60px;
   }
   .loginform {
     position: relative;
-    top: -100px;
-    width: 400px;
+    width: 100%;
   }
   .center {
-    top: -60px;
   }
 }

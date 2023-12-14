@@ -13,15 +13,14 @@ const Learning = () => {
   console.log(cartItems);
   return (
     <>
-      <h2 className="LearingforFuture">Learning For Future</h2>
-      <div className="CartConatiner1">
+      <h2 className="LearningFuture">Learning For Future</h2>
+      <div className="MainLearning">
         {cartItems &&
           cartItems.map((item, index) => (
-            <div className="childCartConatiner" key={index}>
-              <div className="cartDiv">
-                <img className="CartImage" src={item.image} alt="Not Found" />
-              </div>
-              <div>{item.description}</div>
+            <div className="ConatinerForLearning" key={index}>
+              <img className="CartImage" src={item.image} alt="Not Found" />
+
+              <div className="itemLearningDescription">{item.description}</div>
               <div className="CartName">{item.type}</div>
 
               <div className="CartRating">{item.Rating}⭐⭐⭐⭐⭐</div>
