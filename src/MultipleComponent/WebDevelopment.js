@@ -179,7 +179,7 @@ const WebDevelopment = () => {
             {data1
               .filter((item) => item.type === "Web Development")
               .map((item, index) => (
-                <div className="child_container" key={index}>
+                <div className="child_container2" key={index}>
                   <div className="laptop_div">
                     <img
                       className="MainImage"

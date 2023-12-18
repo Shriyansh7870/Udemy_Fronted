@@ -144,8 +144,10 @@ const Home = () => {
         </div>
       </div>
       <div className="ConatinerForCourse">
-        <h3>Expand your career opportunities with Python</h3>
-        <p>
+        <h3 className="ExpandYour">
+          Expand your career opportunities with Python
+        </h3>
+        <p className="TakeYourCarrier">
           Take one of Udemy’s range of Python courses and learn how to code
           using this incredibly useful language. Its simple syntax and
           readability makes Python perfect for Flask, Django, data science, and
@@ -301,10 +303,10 @@ const Home = () => {
               .filter((item) => item.id >= 150 && item.id <= 200)
               .slice(0, 5)
               .map((item, index) => (
-                <div className="child_container anotherchild" key={index}>
+                <div className="AnotherOneChild" key={index}>
                   <div className="laptop_div">
                     <img
-                      className="MainImage"
+                      className="MainImage subImage2"
                       src={item.image}
                       alt="Not Found"
                     />
@@ -492,7 +494,7 @@ const Home = () => {
             </h3>
             <h2>Read Full Story</h2>
           </div>
-          <div>
+          <div className="HIIINCOME">
             <img
               className="ReviewImg"
               src="https://s.udemycdn.com/home/ub-case-studies/James_Hemgen.jpeg"

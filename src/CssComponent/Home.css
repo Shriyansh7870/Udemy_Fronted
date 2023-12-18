@@ -198,9 +198,6 @@ body {
   color: black;
   margin-left: 10%;
 }
-p {
-  color: #5624d0;
-}
 .Topcategories {
   margin-top: 20px;
   background-color: #f7f9fa;
@@ -447,12 +444,36 @@ p {
   * {
     margin: 0;
   }
+  .ExpandYour {
+    padding: 10px;
+  }
   .Advertimsement {
     height: 130px;
     width: 100%;
   }
   .categroies {
     text-align: center;
+  }
+  .subImage2 {
+    width: 98%;
+    margin: auto;
+  }
+  .HIIINCOME {
+    margin: auto;
+  }
+  .Review1 {
+    flex-direction: column;
+  }
+  .textReview {
+    max-width: 85%;
+    margin: auto;
+  }
+  .TakeYourCarrier {
+    width: 90vw;
+    margin: auto;
+  }
+  .ReviewImg {
+    margin: auto;
   }
   .commentContainer {
     min-height: 0;
@@ -519,7 +540,6 @@ p {
     text-align: center;
     position: relative;
     width: 100%;
-    min-height: 340px;
     border-radius: 10px;
   }
   .AddToCart {
@@ -539,6 +559,7 @@ p {
   .LearningContainer {
     height: 100%;
     margin: auto;
+    width: 100%;
   }
   .learningContent {
     flex-direction: column;
@@ -591,6 +612,8 @@ p {
     max-height: 25%;
     max-width: 600px;
     border-radius: 20px;
+    padding: 10px;
+    margin: auto;
   }
   .makingbutton {
     width: 150px;
@@ -606,6 +629,7 @@ p {
   .TeacherText {
     width: 100%;
     height: 100%;
+    margin: 20px 0px;
   }
   .Teacher {
     height: 100%;
@@ -620,7 +644,7 @@ p {
     height: 50px;
   }
   .Teaching {
-    margin-left: 35px;
+    margin-left: 22%;
   }
   .instructorforTeacher {
     text-align: center;
@@ -688,6 +712,63 @@ p {
   .text {
     display: none;
   }
+  .Explore {
+    display: none;
+  }
+  .Advertisment2 {
+    gap: 95px;
+  }
+  .Review {
+    width: 100%;
+    padding: 10px;
+    margin: auto;
+  }
+  .MainImage {
+    width: 100%;
+  }
+  .AnotherAdvertisment {
+    width: 100%;
+    margin: auto;
+    padding: 10px;
+  }
+  .TeacherConatiner {
+    width: 100%;
+    margin: auto;
+  }
+  .companyName {
+    height: auto;
+  }
+  .commentContainer {
+    width: 100%;
+    margin: auto;
+  }
+  .Pythonbutton {
+    display: none;
+  }
+  .categroies {
+    text-align: center;
+  }
+  .Featuredcategory {
+    width: 100%;
+    margin: auto;
+    padding: 10px;
+  }
+  .Explore1 {
+    text-align: center;
+  }
+  .LearningHead {
+    text-align: center;
+  }
+  .Topcategories {
+    width: 100%;
+    margin: auto;
+    padding: 10px;
+  }
+  .ConatinerForCourse {
+    width: 100%;
+    padding: 10px;
+    margin: auto;
+  }
   .listOfCourse {
     width: 100%;
     margin: 0;
@@ -700,15 +781,22 @@ p {
   }
   .LearningContainer {
     width: 100%;
-    margin: 0;
+    margin: auto;
   }
   .learningContent {
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
+    gap: 30px;
   }
   .Child_container {
     width: 780px;
     height: 375px;
+  }
+  .Price-of-All {
+    text-align: center;
+  }
+  .RatingofHome {
+    text-align: center;
   }
   .firstoneadvertisment2 {
     width: 350px;
@@ -723,20 +811,20 @@ p {
   }
 }
 @media screen and (min-width: 1020px) and (max-width: 1400px) {
-  .LearningContainer {
+  .AdvertisementImg {
+    width: auto;
+  }
+  .companyName {
+    height: auto;
+  }
+  .listOfCourse {
     width: 100%;
-    margin: 0;
+    margin: auto;
+    padding: 20px;
   }
-  .learningContent {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  .anotherchild {
-    width: 500px;
-    height: 305px;
-  }
-  .MainImage {
-    width: 500px;
-    border-radius: 10px;
+  .ConatinerForCourse {
+    width: 100%;
+    margin: auto;
+    padding: 10px;
   }
 }

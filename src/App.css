@@ -31,7 +31,7 @@ body {
 /* Cart Item Styles */
 .childCartConatiner {
   display: grid;
-  grid-template-columns: 1fr 3fr 1fr 1fr;
+  grid-template-columns: 4fr 4fr 2fr 1fr;
   border: 1px solid #ddd;
   margin: 10px;
   padding: 10px;
@@ -42,7 +42,9 @@ body {
   height: 150px;
   overflow: hidden;
 }
-
+.cartDescriptionOfCart {
+  padding: 20px;
+}
 .CartImage {
   width: 100%;
   height: 100%;
@@ -75,8 +77,11 @@ body {
 .RemoveButtton {
   background-color: #dc3545;
   color: #fff;
-  width: 200px;
-  height: 60px;
+  width: 150px;
+  height: 45px;
+  text-align: center;
+  justify-content: center;
+  margin-left: 25%;
 }
 
 .buy {
@@ -126,11 +131,14 @@ body {
   font-weight: bold;
   margin-top: 0.5rem;
   text-transform: uppercase;
+  justify-content: center;
+  text-align: center;
 }
 
 .CartRating {
-  font-size: 0.8rem;
+  font-size: 1rem;
   color: #f00;
+  text-align: center;
 }
 
 /* Responsive styles */
@@ -150,7 +158,6 @@ body {
 
 @media only screen and (max-width: 480px) {
   .CartImage {
-    height: 100px;
   }
 
   .itemLearningDescription {

@@ -58,6 +58,15 @@ h2 {
   text-align: center;
   position: relative;
 }
+.child_container2 {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  width: 220px;
+  min-height: 300px;
+  text-align: center;
+  border-radius: 10px;
+}
+
 .MainImage {
   max-width: 100%;
   height: 175px;
@@ -155,21 +164,25 @@ h2 {
   }
   .CartPrice {
     top: 0px;
+    justify-content: center;
   }
   .childCartConatiner {
     height: 100%;
+    display: block;
   }
   .child_container {
     background-color: #fff;
     border: 1px solid #ddd;
     padding: 20px;
-    width: 300px;
-    min-height: 250px;
-    min-height: 400px;
+    width: 100%;
+    min-height: 336px;
     padding: 10px;
     margin: auto;
     text-align: center;
     position: relative;
+  }
+  .child_container2 {
+    width: 100%;
   }
   .nameofItem {
     font-size: 30px;
@@ -206,7 +219,7 @@ h2 {
     text-align: center;
   }
   .nameofItem1 {
-    font-size: 38px;
+    font-size: 30px;
     text-align: center;
   }
   .featureCourse {
@@ -250,6 +263,7 @@ h2 {
   }
   .featuresImage {
     width: 100%;
+    border-radius: 10px;
   }
   .singleCard {
     flex-direction: column;
@@ -277,25 +291,32 @@ h2 {
     overflow-x: hidden;
   }
   .child_container {
-    width: 100%;
-    height: 420px;
+    width: 350px;
+    border-radius: 10px;
   }
   .nameofDescription {
-    font-size: 24px;
+    font-size: 21px;
     text-align: center;
   }
   .AddToCartButton {
-    margin-left: 115px;
     margin-top: -40px;
   }
   .MainImage {
     width: 100%;
-    height: 220px;
     border-radius: 10px;
   }
-  .nameofType {
-    font-size: 32px;
+  .nameofItem1 {
     text-align: center;
+  }
+  .nameofType {
+    font-size: 20px;
+    text-align: center;
+  }
+  .nameofItem {
+    text-align: center;
+  }
+  .carddescription {
+    width: 50%;
   }
   .MainContainer {
     gap: 30px;
@@ -304,10 +325,10 @@ h2 {
     display: none;
   }
   .Instructor {
-    gap: 20px;
+    gap: 40px;
   }
   .singleCard {
-    flex-direction: column;
+    flex-direction: row;
     height: 100%;
   }
   .featuresImage {
@@ -323,11 +344,10 @@ h2 {
   }
   .singleRating {
     text-align: center;
-    font-size: 36px;
+    font-size: 20px;
   }
   .AllImageForTeacher {
-    width: 100%;
-    height: 300px;
+    width: 450px;
     border-radius: 10px;
   }
   .nameOfType {
@@ -342,7 +362,12 @@ h2 {
   .AddToCartButton {
     text-align: center;
     width: 130px;
-    margin-top: 200px;
+    position: relative;
+    margin-top: 10px;
+  }
+  .Price-of-All {
+    text-align: center;
+    width: 50%;
   }
 }
 
